@@ -16,12 +16,12 @@ get_metadata() {
 # Function to determine the source and return an icon and text
 get_source_info() {
 	trackid=$(get_metadata "mpris:trackid")
-	if [[ "$trackid" == *"firefox"* ]]; then
-		echo -e "Firefox 󰈹"
-	elif [[ "$trackid" == *"spotify"* ]]; then
-		echo -e "Spotify "
+	if [[ "$trackid" == *"spotify"* ]]; then
+		echo -e ""
+	elif [[ "$trackid" == *"firefox"* ]]; then
+		echo -e "󰈹"
 	elif [[ "$trackid" == *"chromium"* ]]; then
-		echo -e "Chrome "
+		echo -e ""
 	else
 		echo ""
 	fi
